@@ -9,7 +9,9 @@ routes.get("/", (req, res) => {
   });
 });
 
-routes.get("/users", UserController.index);
-routes.post("/users", UserController.store);
+routes.get("/users", UserController.read);
+routes.post("/users", UserController.create);
+routes.patch("/users/:cpf", UserController.update);
+routes.delete("/users/:cpf", UserController.delete);
 
 module.exports = routes;
