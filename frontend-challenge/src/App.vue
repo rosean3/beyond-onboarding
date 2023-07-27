@@ -1,10 +1,22 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <v-app class="teste">
+    <v-main>
+      <AppBar/>
+      <router-view/>
+    </v-main> 
+  </v-app>
 </template>
+
+<script lang="ts">
+import AppBar from './components/AppBar.vue'
+
+export default {
+  components: {
+    AppBar
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -12,7 +24,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+}
+
+.teste {
+  background-color: #222021 !important;
+  background-image: url('./assets/Vector.png') !important;
+  background-size: cover !important;
 }
 
 nav {
