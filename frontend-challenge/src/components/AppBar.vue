@@ -1,28 +1,34 @@
 <template>
-  <v-app-bar height="85" color="transparent">
+  <v-app-bar height="85" color="#222021">
     <template v-slot:prepend>
-        <img alt="round flashi logo" src="../assets/flashi_redondo.png" width="70"/>
-        <router-link to="/">Home</router-link>
+        <img alt="round flashi logo" :src="require('../assets/flashi_redondo.png')" width="70"/>
+        <router-link to="/" class="linkTexts" id="home">Home</router-link>
     </template>
 
-  <v-toolbar-title>Title</v-toolbar-title>
-
-  <template v-slot:append>
-    <a href="https://github.com/maikermenezes/cria-comp-autoral" class="text">Repositório</a>
-    <router-link :to="{name: 'members'}">Integrantes</router-link>
-  </template>
+    <template v-slot:append>
+      <a class="linkTexts" href="https://github.com/maikermenezes/cria-comp-autoral">Repositório</a>
+      <router-link class="linkTexts" :to="{name: 'members'}">Integrantes</router-link>
+    </template>
 
   </v-app-bar>
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style scoped>
-.text{
-    color: pink;
+.linkTexts{
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+}
+#home{
+  margin-left: 1rem
+}
+.router-link-active{
+  color: rgb(235, 124, 84);
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>
