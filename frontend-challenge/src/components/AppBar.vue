@@ -6,7 +6,7 @@
     </template>
 
     <template v-slot:append>
-      <a class="linkTexts" href="https://github.com/maikermenezes/cria-comp-autoral">Repositório</a>
+      <a target="_blank" class="linkTexts" href="https://github.com/maikermenezes/cria-comp-autoral">Repositório</a>
       <router-link class="linkTexts" :to="{name: 'members'}">Integrantes</router-link>
     </template>
 

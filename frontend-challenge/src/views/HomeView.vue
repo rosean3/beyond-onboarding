@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import CardGallery from "../components/CardGallery.vue"
+import CardGallery from "../components/CardGallery/CardGallery.vue"
 export default {
   components: {
     CardGallery
